@@ -1,6 +1,6 @@
 # Ocean_model
 A threshold based personality assessment application written in python using the flask module 
-To run the application on your PC
+to run the application on your PC
 
 
 
