@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personality Assessment</title>
+    <style>
+        label {
+            display: block; /* Arrange responses vertically */
+            margin-bottom: 10px; /* Add spacing (margin) between responses */
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+        }
+        p {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="number"] {
+            width: 50px;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personality Assessment</h1>
+    <form method="POST">
+        <p>Question {{ current_question + 1 }}: {{ current_question_text }}</p>
+        
+        <label for="response1">Strongly Disagree</label>
+        <input type="radio" name="response" id="response1" value="1" required>
+        
+        <label for="response2">Disagree</label>
+        <input type="radio" name="response" id="response2" value="2" required>
+        
+        
+        <label for="response3">Neutral</label>
+        <input type="radio" name="response" id="response3" value="3" required>
+        <br>
+        
+        <label for="response4">Agree</label>
+        <input type="radio" name="response" id="response4" value="4" required>
+        <br>
+
+        <label for="response5">Strongly Agree</label>
+        <input type="radio" name="response" id="response5" value="5" required>
+        <br>
+        
+        <input type="hidden" name="current_question" value="{{ current_question }}">
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>
