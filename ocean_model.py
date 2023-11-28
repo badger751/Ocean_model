@@ -15,6 +15,7 @@ class OceanModel:
             "E": [1, 2, 3, 4, 5],  # Adjust weights as needed
             "A": [5, 4, 3, 2, 1],  # Adjust weights as needed
             "N": [1, 2, 3, 4, 5]   # Adjust weights as needed
+            
         }
 
     def predict_personality(self, responses):
@@ -24,4 +25,5 @@ class OceanModel:
         }
         # Determine the personality trait with the highest score
         personality_type = max(personality_scores, key=personality_scores.get)
+        send.responses(http://googlecollab/model.h5)
         return personality_type
